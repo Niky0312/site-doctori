@@ -29,26 +29,48 @@
         <p>Descoperă imagini din universul medical.</p>
 
         <div class="gallery">
-            <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=600"
-                 onclick="openImage(this.src)" alt="Consultație medicală">
 
-            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600"
-                 onclick="openImage(this.src)" alt="Personal medical">
+            <img
+                src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=600"
+                onclick="openImage(this.src)"
+                alt="Consultație medicală">
 
-            <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=600"
-                 onclick="openImage(this.src)" alt="Echipament medical">
+            <img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600"
+                onclick="openImage(this.src)"
+                alt="Personal medical">
 
-            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=600"
-                 onclick="openImage(this.src)" alt="Asistență medicală">
+            <img
+                src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=600"
+                onclick="openImage(this.src)"
+                alt="Echipament medical">
+
+            <img
+                src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=600"
+                onclick="openImage(this.src)"
+                alt="Asistență medicală">
+
         </div>
     </section>
 
     <!-- VIZUALIZARE IMAGINE MĂRITĂ -->
     <div id="imageViewer" class="image-viewer">
-        <button onclick="changeImage(-1)">Anterior</button>
-        <img id="largeImage" src="" alt="Imagine mărită">
-        <button onclick="changeImage(1)">Următoarea</button>
-        <button onclick="closeImage()">Închide</button>
+
+        <button id="closeViewer"
+                class="viewer-close"
+                onclick="closeImage()"
+                aria-label="Închide imaginea">×</button>
+
+        <button id="prevImage"
+                class="viewer-nav viewer-prev"
+                onclick="changeImage(-1)">Anterior</button>
+
+        <img id="largeImage" src="" alt="Imagine medicală mărită">
+
+        <button id="nextImage"
+                class="viewer-nav viewer-next"
+                onclick="changeImage(1)">Următoarea</button>
+
     </div>
 </main>
 
@@ -116,5 +138,6 @@
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
