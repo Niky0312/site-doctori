@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - MedFinder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">MedFinder</div>
+
+    <nav>
+        <a href="index.html">Acasă</a>
+        <a href="medici.html">Medici</a>
+        <a href="specializari.html">Specializări</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <button id="themeToggle">🌙 Mod întunecat</button>
+</header>
+
+<main>
+    <section class="specialties">
+        <h1>Contactează-ne</h1>
+        <p>Ai întrebări? Trimite-ne un mesaj!</p>
+
+        <form id="contactForm" class="contact-form">
+
+            <input type="text" id="name"
+                   placeholder="Nume și prenume" required>
+
+            <input type="email" id="email"
+                   placeholder="Adresa de e-mail" required>
+
+            <input type="tel" id="phone"
+                   placeholder="Număr de telefon"
+                   pattern="[0-9 +()-]{7,20}" required>
+
+            <input type="text" id="subject"
+                   placeholder="Subiect" required>
+
+            <textarea id="message"
+                      placeholder="Scrie mesajul tău..."
+                      rows="6" required></textarea>
+
+            <button type="submit">Trimite mesajul</button>
+
+            <p id="formMessage"></p>
+
+        </form>
+    </section>
+</main>
+
+<!-- BUTON AJUTOR -->
+<button id="helpButton" title="Ajutor">?</button>
+
+<!-- FEREASTRA AJUTOR -->
+<div id="helpBox">
+    <h3>Ajutor MedFinder</h3>
+
+    <p><strong>Acasă:</strong> Caută informații despre medici și specializări.</p>
+    <p><strong>Medici:</strong> Caută medici după nume, specializare sau oraș.</p>
+    <p><strong>Specializări:</strong> Explorează domeniile medicale.</p>
+    <p><strong>Galerie:</strong> Selectează imaginile pentru a le mări.</p>
+    <p><strong>Contact:</strong> Completează formularul pentru a valida un mesaj.</p>
+
+    <button onclick="closeHelp()">Închide</button>
+</div>
+
+<!-- BUTON ÎNAPOI SUS -->
+<button id="backToTop" title="Înapoi sus">↑</button>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="social-icons">
+
+        <!-- FACEBOOK -->
+        <span class="social-icon" role="img" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="12" fill="#1877F2"/>
+                <path fill="white" d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8z"/>
+            </svg>
+        </span>
+
+        <!-- INSTAGRAM -->
+        <span class="social-icon" role="img" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+                <defs>
+                    <linearGradient id="instagramGradient" x1="0" y1="1" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#FFB800"/>
+                        <stop offset="50%" stop-color="#FF315D"/>
+                        <stop offset="100%" stop-color="#8A3FFC"/>
+                    </linearGradient>
+                </defs>
+                <rect x="1" y="1" width="22" height="22" rx="6" fill="url(#instagramGradient)"/>
+                <rect x="5.5" y="5.5" width="13" height="13" rx="4" fill="none" stroke="white" stroke-width="1.8"/>
+                <circle cx="12" cy="12" r="3.2" fill="none" stroke="white" stroke-width="1.8"/>
+                <circle cx="17.2" cy="6.9" r="1.1" fill="white"/>
+            </svg>
+        </span>
+
+        <!-- YOUTUBE -->
+        <span class="social-icon" role="img" aria-label="YouTube">
+            <svg viewBox="0 0 24 24">
+                <rect x="1" y="4" width="22" height="16" rx="5" fill="#FF0033"/>
+                <path d="M10 8v8l6-4z" fill="white"/>
+            </svg>
+        </span>
+
+    </div>
+
+    <p>© 2026 MedFinder</p>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

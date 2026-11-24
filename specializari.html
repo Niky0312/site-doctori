@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specializări - MedFinder</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* DESIGN PAGINA SPECIALIZARI */
+
+        .specialties {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 25px 80px;
+            text-align: center;
+        }
+
+        .specialties h1 {
+            color: #2476b9;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .specialties-intro {
+            color: #64748b;
+            font-size: 17px;
+            margin-bottom: 45px;
+        }
+
+        .specialty-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            text-align: left;
+        }
+
+        .specialty-card {
+            background: white;
+            border: 1px solid #e4ebf2;
+            border-radius: 12px;
+            padding: 30px 25px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            box-shadow: 0 4px 15px rgba(35, 65, 95, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .specialty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 9px 24px rgba(35, 65, 95, 0.12);
+        }
+
+        .specialty-icon {
+            width: 43px;
+            height: 43px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: #eaf3fb;
+            color: #2476b9;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .specialty-card h3 {
+            color: #26384a;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .specialty-card p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+
+        .specialty-card a {
+            display: inline-block;
+            margin-top: auto;
+            color: #2476b9;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            border-bottom: 1px solid transparent;
+            transition: 0.2s;
+        }
+
+        .specialty-card a:hover {
+            color: #1c5f96;
+            border-bottom-color: #1c5f96;
+        }
+
+        /* MOD INTUNECAT */
+
+        body.dark-mode .specialty-card {
+            background: #243447;
+            border-color: #34485e;
+        }
+
+        body.dark-mode .specialty-card h3 {
+            color: #e6edf5;
+        }
+
+        body.dark-mode .specialty-card p,
+        body.dark-mode .specialties-intro {
+            color: #b8c6d6;
+        }
+
+        body.dark-mode .specialty-icon {
+            background: #344c65;
+            color: #75b9f0;
+        }
+
+        body.dark-mode .specialty-card a {
+            color: #75b9f0;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 800px) {
+            .specialty-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .specialties {
+                padding: 40px 18px 60px;
+            }
+
+            .specialties h1 {
+                font-size: 27px;
+            }
+
+            .specialty-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MedFinder</div>
+
+    <nav>
+        <a href="index.html">Acasă</a>
+        <a href="medici.html">Medici</a>
+        <a href="specializari.html" class="active">Specializări</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <button id="themeToggle">🌙 Mod întunecat</button>
+</header>
+
+<main>
+
+    <section class="specialties">
+
+        <h1>Specializări medicale</h1>
+
+        <p class="specialties-intro">
+            Descoperă domeniile medicale și găsește specializarea potrivită nevoilor tale.
+        </p>
+
+        <div class="specialty-grid">
+
+            <div class="specialty-card">
+                <div class="specialty-icon">♡</div>
+                <h3>Cardiologie</h3>
+                <p>Diagnosticarea și tratarea afecțiunilor inimii și ale sistemului cardiovascular.</p>
+                <a href="medici.html">Vezi medicii →</a>
+            </div>
+
+            <div class="specialty-card">
+                <div class="specialty-icon">✧</div>
+                <h3>Dermatologie</h3>
+                <p>Îngrijirea pielii și diagnosticarea afecțiunilor dermatologice.</p>
+                <a href="medici.html">Vezi medicii →</a>
+            </div>
+
+            <div class="specialty-card">
+                <div class="specialty-icon">⌘</div>
+                <h3>Neurologie</h3>
+                <p>Diagnosticarea și tratarea afecțiunilor sistemului nervos.</p>
+                <a href="medici.html">Vezi medicii →</a>
+            </div>
+
+            <div class="specialty-card">
+                <div class="specialty-icon">♡</div>
+                <h3>Pediatrie</h3>
+                <p>Consultații și servicii medicale dedicate sănătății copiilor.</p>
+                <a href="medici.html">Vezi medicii →</a>
+            </div>
+
+            <div class="specialty-card">
+                <div class="specialty-icon">◎</div>
+                <h3>Oftalmologie</h3>
+                <p>Consultații, diagnostic și tratamente pentru sănătatea ochilor.</p>
+                <a href="medici.html">Vezi medicii →</a>
+            </div>
+
+            <div class="specialty-card">
+                <div class="specialty-icon">✚</div>
+                <h3>Ginecologie</h3>
+                <p>Consultații și servicii medicale pentru sănătatea femeii.</p>
+                <a href="medici.html">Vezi medicii →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- BUTON AJUTOR -->
+<button id="helpButton" title="Ajutor">?</button>
+
+<!-- FEREASTRA AJUTOR -->
+<div id="helpBox">
+    <h3>Ajutor MedFinder</h3>
+
+    <p><strong>Acasă:</strong> Caută informații despre medici și specializări.</p>
+    <p><strong>Medici:</strong> Caută medici după nume, specializare sau oraș.</p>
+    <p><strong>Specializări:</strong> Explorează domeniile medicale.</p>
+    <p><strong>Galerie:</strong> Selectează imaginile pentru a le mări.</p>
+    <p><strong>Contact:</strong> Completează formularul pentru a valida un mesaj.</p>
+
+    <button onclick="closeHelp()">Închide</button>
+</div>
+
+<!-- BUTON ÎNAPOI SUS -->
+<button id="backToTop" title="Înapoi sus">↑</button>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="social-icons">
+
+        <!-- FACEBOOK -->
+        <span class="social-icon" role="img" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="12" fill="#1877F2"/>
+                <path fill="white" d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8z"/>
+            </svg>
+        </span>
+
+        <!-- INSTAGRAM -->
+        <span class="social-icon" role="img" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+                <defs>
+                    <linearGradient id="instagramGradient" x1="0" y1="1" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#FFB800"/>
+                        <stop offset="50%" stop-color="#FF315D"/>
+                        <stop offset="100%" stop-color="#8A3FFC"/>
+                    </linearGradient>
+                </defs>
+                <rect x="1" y="1" width="22" height="22" rx="6" fill="url(#instagramGradient)"/>
+                <rect x="5.5" y="5.5" width="13" height="13" rx="4" fill="none" stroke="white" stroke-width="1.8"/>
+                <circle cx="12" cy="12" r="3.2" fill="none" stroke="white" stroke-width="1.8"/>
+                <circle cx="17.2" cy="6.9" r="1.1" fill="white"/>
+            </svg>
+        </span>
+
+        <!-- YOUTUBE -->
+        <span class="social-icon" role="img" aria-label="YouTube">
+            <svg viewBox="0 0 24 24">
+                <rect x="1" y="4" width="22" height="16" rx="5" fill="#FF0033"/>
+                <path d="M10 8v8l6-4z" fill="white"/>
+            </svg>
+        </span>
+
+    </div>
+
+    <p>© 2026 MedFinder</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
